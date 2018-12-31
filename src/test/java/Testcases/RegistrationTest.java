@@ -57,7 +57,7 @@ public class RegistrationTest extends BaseClass {
         if(testResult.getStatus()==ITestResult.FAILURE){
             String path = Screenshot.takeScreenshots(driver, testResult.getName());
             String imagePath = test.addScreenCapture(path);
-            test.log(LogStatus.FAIL, "Test Failed");
+            test.log(LogStatus.FAIL, imagePath);
 
         }
         driver.quit();
