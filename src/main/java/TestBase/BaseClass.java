@@ -21,7 +21,7 @@ public class BaseClass {
 
         try {
         prop = new Properties();
-        ip = new FileInputStream("/Users/mcseagate/IdeaProjects/cdiccen/src/config.properties");
+        ip = new FileInputStream("/Users/mgodfrey/IdeaProjects/cdiccen/src/config.properties");
         prop.load(ip);
 
         } catch (FileNotFoundException e){
@@ -37,11 +37,11 @@ public class BaseClass {
         String browserName = prop.getProperty("browser");
 
         if(browserName.equalsIgnoreCase("Chrome")){
-            System.setProperty("webdriver.chrome.driver" , "/Users/mcseagate/Documents/Drivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver" , "/Users/mgodfrey/Documents/Drivers/chromedriver");
             driver = new ChromeDriver();
 
         } else if(browserName.equalsIgnoreCase("Firefox")){
-            System.setProperty("webdriver.gecko.driver" , "/Users/mcseagate/Documents/Drivers/geckodriver");
+            System.setProperty("webdriver.gecko.driver" , "/Users/mgodfrey/Documents/Drivers/geckodriver");
             driver = new FirefoxDriver();
 
         } else{
