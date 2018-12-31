@@ -1,9 +1,14 @@
 package TestBase;
 
 import PageConfiguration.PageConfig;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,6 +20,7 @@ public class BaseClass {
     public static WebDriver driver;
     public static Properties prop;
     public static FileInputStream ip;
+
 
 
     public BaseClass(){
@@ -40,9 +46,11 @@ public class BaseClass {
             System.setProperty("webdriver.chrome.driver" , "/Users/mgodfrey/Documents/Drivers/chromedriver");
             driver = new ChromeDriver();
 
+
         } else if(browserName.equalsIgnoreCase("Firefox")){
             System.setProperty("webdriver.gecko.driver" , "/Users/mgodfrey/Documents/Drivers/geckodriver");
             driver = new FirefoxDriver();
+
 
         } else{
             System.out.println("Browser Type Not In Use");
@@ -54,4 +62,7 @@ public class BaseClass {
         driver.get(prop.getProperty("url"));
 
     }
+
+
+
 }

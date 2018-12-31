@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/mgodfrey/IdeaProjects/cdiccen">
+        <classes>
+            <class name="Testcases.RegistrationTest">
+                <methods>
+                    <include name="userRegistration"/>
+                    <include name="verifyTitle"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
