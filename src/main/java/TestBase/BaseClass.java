@@ -1,20 +1,15 @@
 package TestBase;
 
 import PageConfiguration.PageConfig;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
 
 public class BaseClass {
     public static WebDriver driver;
@@ -41,14 +36,16 @@ public class BaseClass {
 
     public static void initialization(){
         String browserName = prop.getProperty("browser");
+        String chpath = "/Users/mgodfrey/IdeaProjects/cdiccen/src/Drivers/chromedriver 2";
+        String ffpath ="/Users/mgodfrey/Documents/Drivers/geckodriver";
 
         if(browserName.equalsIgnoreCase("Chrome")){
-            System.setProperty("webdriver.chrome.driver" , "/Users/mgodfrey/Documents/Drivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver" , chpath);
             driver = new ChromeDriver();
 
 
         } else if(browserName.equalsIgnoreCase("Firefox")){
-            System.setProperty("webdriver.gecko.driver" , "/Users/mgodfrey/Documents/Drivers/geckodriver");
+            System.setProperty("webdriver.gecko.driver" , ffpath);
             driver = new FirefoxDriver();
 
 

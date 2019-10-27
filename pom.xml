@@ -69,6 +69,16 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.gebish/geb-core -->
+        <dependency>
+            <groupId>org.gebish</groupId>
+            <artifactId>geb-core</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+
+
+
+
 
     </dependencies>
 

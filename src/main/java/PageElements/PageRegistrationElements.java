@@ -1,13 +1,15 @@
 package PageElements;
 
 import TestBase.BaseClass;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageRegistrationElements extends BaseClass {
-
+    JavascriptExecutor js = (JavascriptExecutor) driver;
     public PageRegistrationElements(){
+
         PageFactory.initElements(driver, this);
     }
 
@@ -50,6 +52,11 @@ public class PageRegistrationElements extends BaseClass {
 
     @FindBy(css="body > div > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) > td > form > table > tbody > tr:nth-child(18) > td > input[type=\"image\"]")
     WebElement submit;
+
+
+
+
+
 
 
 
